@@ -1,0 +1,1604 @@
+html{
+
+scroll-behavior:smooth;
+
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:"Poppins",sans-serif;
+
+background-color: #1d0ab0;
+overflow-x:hidden;
+
+color:rgb(255, 255, 255);
+
+position:relative;
+
+}
+
+.landing{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+background-color: #020a0b;
+
+}
+.title{
+
+font-family:"Great Vibes",cursive;
+
+font-size:60px;
+
+color:white;
+
+margin-bottom:50px;
+
+text-shadow:0 5px 10px rgba(0,0,0,.2);
+
+}
+
+.envelope{
+
+position:relative;
+
+width:340px;
+color:aqua;
+height:220px;
+
+overflow:hidden;
+
+}
+
+
+.letter{
+
+position:absolute;
+
+left:5%;
+
+bottom:0;
+
+width:90%;
+
+height:82%;
+
+background:white;
+
+border-radius:12px;
+
+padding:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+z-index:2;
+
+transition:1.2s;
+
+}
+
+.letter h2{
+
+font-family:"Great Vibes";
+
+font-size:42px;
+
+color:#ff4d6d;
+
+}
+
+.letter p{
+
+margin-top:10px;
+
+text-align:center;
+
+}
+
+.open .top{
+
+transform:rotateX(180deg);
+
+}
+
+.open .letter{
+
+transform:translateY(-160px);
+
+}
+
+.click-text{
+
+margin-top:30px;
+
+color:white;
+
+font-size:18px;
+
+}
+
+.home{
+
+position:relative;
+
+width:100%;
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+color:white;
+
+transition:1s;
+
+}
+.hidden{
+
+display:none;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+background:white;
+
+color:#ff4d6d;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px;
+
+position:relative;
+
+}
+
+.hero-title{
+
+font-size:70px;
+
+font-family:"Great Vibes",cursive;
+
+margin-bottom:20px;
+
+color:white;
+
+text-shadow:0 5px 20px rgba(0,0,0,.25);
+
+}
+
+.hero-text{
+
+font-size:22px;
+
+width:70%;
+
+max-width:700px;
+
+text-align:center;
+
+line-height:1.8;
+
+color:white;
+
+margin-bottom:40px;
+
+}
+
+.explore-btn{
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+background:white;
+
+color:#ff4d6d;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.explore-btn:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ===========================
+NAVBAR
+===========================*/
+
+.navbar{
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90%;
+
+max-width:1200px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 40px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border-radius:50px;
+
+z-index:999;
+
+box-shadow:0 10px 40px rgba(0,0,0,.2);
+
+}
+
+.logo{
+
+font-family:"Great Vibes",cursive;
+
+font-size:34px;
+
+color:white;
+
+}
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#ffe4ee;
+
+}
+
+.dark-btn{
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.2);
+
+color:white;
+
+margin:0;
+
+}
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px;
+
+}
+
+.hero-content{
+
+max-width:700px;
+
+}
+
+.hero-subtitle{
+
+font-size:20px;
+
+letter-spacing:3px;
+
+margin-bottom:15px;
+
+text-transform:uppercase;
+
+opacity:.8;
+
+}
+.memories{
+min-height:100vh;
+padding:120px 8%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.section-title{
+font-size:60px;
+font-family:"Great Vibes",cursive;
+margin-bottom:20px;
+}
+
+.section-description{
+margin-bottom:60px;
+font-size:20px;
+opacity:.9;
+}
+
+.memory-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.memory-card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+padding:20px;
+border-radius:25px;
+transition:.4s;
+}
+
+.memory-card:hover{
+transform:translateY(-10px);
+}
+
+.memory-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:15px;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* ===========================
+GALLERY
+===========================*/
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:60px;
+width: 100%;
+}
+
+.gallery-item{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+cursor:pointer;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+transition:.4s;
+}
+
+.gallery-item:hover{
+transform:translateY(-10px);
+}
+
+.gallery-item img{
+width:100%;
+height:380px;
+object-fit:cover;
+display:block;
+transition:.6s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.8));
+color:white;
+transform:translateY(100%);
+transition:.5s;
+}
+
+.gallery-item:hover .overlay{
+transform:translateY(0);
+}
+
+/* ==========================================================================
+   INTERACTIVE ALBUM UTILITIES & CONTROLS
+   ========================================================================== */
+.hidden-album-container {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Toggles the sub-gallery view dynamically */
+.show-album-container {
+    display: flex !important;
+}
+
+#backToAlbumsBtn {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ffffff;
+    color: #ff4d6d;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#backToAlbumsBtn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+/* ===========================
+LIGHTBOX
+===========================*/
+
+.lightbox{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.95);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:20px;
+
+}
+
+.close-lightbox{
+
+position:absolute;
+
+top:30px;
+
+right:40px;
+
+font-size:50px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+/* ==========================================================================
+   UPDATED SCRAPBOOK LOVE LETTER
+   ========================================================================== */
+.love-letter {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #1d0ab0;
+}
+
+.scrapbook-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Base Scrapbook Page Style (Looks like real lined/blank paper) */
+.scrapbook-page {
+    background: #fdfdfd;
+    color: #333;
+    width: 420px;
+    min-height: 525px;
+    padding: 40px 30px;
+    box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+/* Tilted page effects matching your image */
+.page-left {
+    transform: rotate(-3deg);
+    background-image: linear-gradient(#e8e8e8 1px, transparent 1px); /* Subtle notebook line effect */
+    background-size: 100% 28px;
+    padding-top: 60px;
+}
+
+.page-right {
+    transform: rotate(2deg);
+    justify-content: flex-start;
+
+}
+
+/* Washi Tape / Sticker Effect */
+.tape-sticker {
+    position: absolute;
+    top: 15px;
+    background: rgba(255, 77, 109, 0.8);
+    color: white;
+    padding: 4px 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transform: rotate(-2deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 5;
+}
+
+/* Polaroid Inside the Notebook */
+.featured-polaroid {
+    background: white;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 240px;
+    transform: rotate(4deg);
+    border: 1px solid #eee;
+}
+
+.featured-polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-polaroid p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #070000;
+    text-align: center;
+}
+
+/* Doodle Section */
+.doodle-container {
+    margin-top: auto; /* Pushes doodle to the bottom */
+    text-align: center;
+}
+
+.hearts-doodle {
+    font-size: 14px;
+    margin-bottom: 2px;
+    opacity: 0.8;
+}
+
+.stick-figures {
+    font-size: 45px; /* Emoji fallback for the hand-drawn couple */
+    filter: grayscale(0.2);
+}
+
+/* Typing text stylized as handwriting */
+.typing-text {
+    font-family: "Poppins", sans-serif; 
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000; /* CHANGED TO PURE BLACK */
+    text-align: left;
+    white-space: pre-line;
+    width: 100%;
+}
+.letter-card h2{
+
+font-family:"Great Vibes",cursive;
+
+font-size:60px;
+
+margin-bottom:35px;
+
+color:rgb(9, 0, 0);
+
+}
+
+.typing-text{
+
+font-size:18px;
+
+line-height:2;
+
+color:rgb(8, 0, 0);
+
+white-space:pre-line;
+
+min-height:250px;
+text-align: center;
+
+}
+/* ===========================
+MUSIC PLAYER
+=========================== */
+
+.music-player{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:15px 25px;
+
+border-radius:60px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+z-index:9999;
+
+}
+
+#musicBtn{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:none;
+
+background:white;
+
+color:#ff4d6d;
+
+font-size:24px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+#musicBtn:hover{
+
+transform:scale(1.1) rotate(15deg);
+
+}
+
+.song-info{
+
+display:flex;
+
+flex-direction:column;
+
+color:white;
+
+}
+
+.song-title{
+
+font-weight:600;
+
+font-size:18px;
+
+}
+/* ===========================
+PREMIUM ENVELOPE
+===========================*/
+
+.envelope-wrapper{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+animation:floatEnvelope 4s ease-in-out infinite;
+
+}
+
+.shadow{
+
+position:absolute;
+
+bottom:-20px;
+
+width:260px;
+
+height:30px;
+
+background:rgba(0,0,0,.25);
+
+filter:blur(20px);
+
+border-radius:50%;
+
+animation:shadowFloat 4s ease-in-out infinite;
+
+}
+
+.envelope{
+
+position:relative;
+
+width:340px;
+
+height:220px;
+
+overflow:hidden;
+
+border-radius:15px;
+
+perspective:1200px;
+
+cursor:pointer;
+
+}
+
+.envelope-back{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:#1da5d2;
+
+border-radius:15px;
+
+z-index:1;
+
+}
+
+.envelope-front{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:100%;
+
+background:#1da5d2;
+
+clip-path:polygon(0 100%,50% 45%,100% 100%);
+
+z-index:4;
+
+}
+
+.envelope-flap{
+
+position:absolute;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:#1da5d2;
+
+clip-path:polygon(0 0,50% 48%,100% 0);
+
+transform-origin:top;
+
+transition:1s ease;
+
+z-index:5;
+
+}
+
+.letter{
+
+position:absolute;
+
+left:7%;
+
+bottom:-5px;
+
+width:86%;
+
+height:78%;
+
+background:rgb(248, 250, 248);
+
+border-radius:12px;
+
+padding:20px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+transition:1s ease;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+z-index:2;
+
+}
+
+.letter h2{
+
+font-family:"Great Vibes",cursive;
+
+font-size:42px;
+
+color:#ff4d6d;
+
+margin-bottom:15px;
+
+}
+
+.letter p{
+
+font-size:16px;
+
+line-height:1.6;
+
+color:#555;
+
+}
+
+.open .envelope-flap{
+
+transform:rotateX(180deg);
+
+}
+
+.open .letter{
+
+transform:translateY(-120px);
+
+}
+
+@keyframes floatEnvelope{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+@keyframes shadowFloat{
+
+0%,100%{
+
+transform:scale(1);
+
+opacity:.25;
+
+}
+
+50%{
+
+transform:scale(.8);
+
+opacity:.15;
+
+}
+
+}
+/* ===========================
+🌸 STEP 11 VISUAL EFFECTS
+=========================== */
+
+/* 🌅 ensure background layering */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+}
+
+/* 🌸 PETALS */
+.petal {
+  position: fixed;
+  top: -10vh;
+  font-size: 22px;
+  opacity: 0.9;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* 💖 FLOATING HEARTS (soft version) */
+.heart {
+  position: fixed;
+  font-size: 18px;
+  opacity: 0.7;
+  animation: floatUp linear forwards;
+  pointer-events: none;
+  z-index: 4;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* ✨ SPARKLES */
+.sparkle {
+  position: fixed;
+  font-size: 10px;
+  color: white;
+  opacity: 0.9;
+  animation: sparkleAnim 1.2s linear forwards;
+  pointer-events: none;
+  z-index: 6;
+}
+
+@keyframes sparkleAnim {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* 🖱️ CURSOR GLOW */
+.cursor-glow {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+/* 🎬 INTRO SCREEN */
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  background: rgb(29, 19, 164);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 3s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.intro-screen h1 {
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+.intro-screen p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* 📖 TIMELINE SECTION */
+.timeline {
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.story {
+  margin: 80px auto;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeUp 1s forwards;
+}
+
+.story:nth-child(1) { animation-delay: 0.2s; }
+.story:nth-child(2) { animation-delay: 0.4s; }
+.story:nth-child(3) { animation-delay: 0.6s; }
+.story:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ending {
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+.ending h1 {
+  font-size: 32px;
+}
+
+.ending button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hidden-final {
+  display: none;
+  margin-top: 20px;
+}
+/* 💖 MEMORY WALL */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 20px;
+}
+
+/* 📸 POLAROID STYLE */
+.polaroid {
+  width: 180px;
+  background: white;
+  padding: 10px 10px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  transform: rotate(var(--r));
+  transition: 0.3s ease;
+}
+
+/* image inside */
+.polaroid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* caption */
+.polaroid p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* hover effect */
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
+
+/* random tilt effect */
+.polaroid:nth-child(1) { --r: -5deg; }
+.polaroid:nth-child(2) { --r: 4deg; }
+.polaroid:nth-child(3) { --r: -3deg; }
+.polaroid:nth-child(4) { --r: 6deg; }
+.polaroid:nth-child(5) { --r: -2deg; }
+.polaroid:nth-child(6) { --r: 3deg; }
+
+/* ==========================================================================
+   🎬 VINTAGE TIN & VIDEO TIMELINE SECTION
+   ========================================================================== */
+.timeline {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background-color: #1d0ab0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Red & White Checkered Picnic Gingham Pattern Blanket */
+.picnic-blanket {
+    position: relative;
+    padding: 60px;
+    background-color: #ffffff;
+    background-image: 
+        linear-gradient(90deg, rgba(255, 77, 109, 0.5) 50%, transparent 50%),
+        linear-gradient(rgba(255, 77, 109, 0.5) 50%, transparent 50%);
+    background-size: 40px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform: rotate(-2deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Metallic/Silver Tin Container Box */
+.vintage-tin {
+    background: linear-gradient(135deg, #e6e6e6, #b3b3b3, #f2f2f2, #999999);
+    border: 4px solid #cccccc;
+    border-radius: 35px;
+    width: 500px;
+    padding: 25px;
+    box-shadow: 
+        inset 0 0 20px rgba(0,0,0,0.2),
+        10px 15px 30px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: rotate(4deg); /* Offsets beautifully against the blanket */
+}
+
+/* Shared Top and Bottom Sections Inside the Tin */
+.tin-half {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border: 2px inset rgba(255,255,255,0.4);
+    padding: 15px;
+}
+
+/* Scrapbook Frames Inside the Tin Box */
+.tin-photo {
+    background: white;
+    padding: 8px 8px 16px 8px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.15);
+    position: absolute;
+    border-radius: 2px;
+}
+
+.tin-photo img, 
+.tin-photo video {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tin-photo p {
+    color: #222;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+/* Specific Placements & Tilts to match your layout reference image */
+.main-video-polaroid {
+    width: 170px;
+    left: 20px;
+    top: 15px;
+    transform: rotate(-4deg);
+    z-index: 3;
+}
+.main-video-polaroid video {
+    height: 130px;
+    border-radius: 2px;
+}
+
+.photo-back-top {
+    width: 130px;
+    right: 40px;
+    top: 10px;
+    transform: rotate(8deg);
+    z-index: 1;
+}
+.photo-back-top img {
+    height: 150px;
+}
+
+.photo-bottom-left {
+    width: 150px;
+    left: 35px;
+    bottom: 15px;
+    transform: rotate(5deg);
+    z-index: 2;
+}
+.photo-bottom-left img {
+    height: 120px;
+}
+
+.photo-stamp {
+    width: 110px;
+    right: 50px;
+    top: 15px;
+    transform: rotate(-6deg);
+    border: 4px dashed #ddd; /* Stamp decorative edge fallback */
+}
+.photo-stamp img {
+    height: 110px;
+}
+
+/* Decorative Stickers placement */
+.sticker {
+    position: absolute;
+    font-size: 26px;
+    z-index: 5;
+    pointer-events: none;
+}
+.flower-sticker { left: -10px; top: 90px; font-size: 35px; }
+.camera-sticker { right: 20px; top: -15px; transform: rotate(15deg); }
+.bow-sticker { right: 25px; bottom: 30px; }
+.clip-binder { position: absolute; top: -15px; left: 40%; font-size: 20px; }
+.pushpin { left: 10px; top: -10px; font-size: 22px; }
+
+/* 🎵 SPINNING VINYL RECORD STYLING */
+.vinyl-record {
+    position: absolute;
+    right: 20px;
+    bottom: -15px;
+    width: 85px;
+    height: 85px;
+    background: radial-gradient(circle, #333 40%, #111 41%, #000 100%);
+    border-radius: 50%;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    animation: spinVinyl 4s linear infinite;
+    border: 2px solid #222;
+}
+
+.vinyl-center {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    border: 3px double #ff4d6d;
+}
+
+.vinyl-text {
+    position: absolute;
+    font-size: 7px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+@keyframes spinVinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* ==========================================================================
+   🏍️ SURPRISE BABY BOY SECTION & INLINE VIDEO LAYOUT
+   ========================================================================== */
+.motorbike-surprise {
+    min-height: 80vh;
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.babyboy-btn {
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff4d6d, #ff758f);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.babyboy-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 77, 109, 0.6);
+}
+
+.hidden-video-panel {
+    display: none !important;
+}
+
+.surprise-showcase-container {
+    width: 100%;
+    max-width: 340px; /* Perfect width for a portrait phone frame look */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.motorbike-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16; /* 🌟 Forces the entire frame into a true original portrait ratio */
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Container for your custom CSS clapperboard overlay */
+.video-logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Crisp white backdrop canvas so the black icon shows up perfectly */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-logo-overlay h3 {
+    color: #111 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px;
+}
+
+/* 🎬 PURE CSS CLAPPERBOARD LOGO DRAWING */
+.css-clapperboard {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The opening top bar with classic clapper stripes */
+.clapper-top {
+    width: 130px;
+    height: 25px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #111,
+        #111 10px,
+        #fff 10px,
+        #fff 20px
+    );
+    border-radius: 4px 4px 0 0;
+    border: 2px solid #111;
+    transform-origin: bottom left;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-sizing: border-box;
+}
+
+/* The main base box body */
+.clapper-bottom {
+    width: 130px;
+    height: 85px;
+    background: #111;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+
+/* Play symbol inside the slate box */
+.play-triangle-inner {
+    color: white !important;
+    font-size: 26px !important;
+    margin-left: 4px !important; 
+    transition: transform 0.3s ease;
+}
+
+/* Actions: Hover triggers */
+.video-logo-overlay:hover .clapper-top {
+    transform: rotate(-12deg) translateY(-2px);
+}
+
+.video-logo-overlay:hover .play-triangle-inner {
+    transform: scale(1.15);
+    color: #ff4d6d !important;
+}
+
+.exit-video-btn {
+    cursor: pointer;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    background: #ffffff;
+    color: #ff4d6d;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exit-video-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}

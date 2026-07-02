@@ -115,7 +115,7 @@ document.querySelectorAll(".album-cover").forEach(cover => {
                 
                 photoCard.innerHTML = `
                     <img src="${photoSrc}" alt="Memory ${i}">
-                    <p>Memory #${i} ✨</p>
+                    <p>Photo #${i} ✨</p>
                 `;
                 
                 // Fullscreen click zoom engine placement

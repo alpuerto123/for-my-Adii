@@ -60,93 +60,123 @@ text-shadow:0 5px 10px rgba(0,0,0,.2);
 
 }
 
-.envelope{
-
-position:relative;
-
-width:340px;
-color:aqua;
-height:220px;
-
-overflow:hidden;
-
+/* ✉️ Main Envelope Container */
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background-color: #1e70b8; /* Rich base blue */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: visible; /* Allows the bow loops and tails to pop out nicely */
 }
 
-
-.letter{
-
-position:absolute;
-
-left:5%;
-
-bottom:0;
-
-width:90%;
-
-height:82%;
-
-background:white;
-
-border-radius:12px;
-
-padding:25px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-z-index:2;
-
-transition:1.2s;
-
+/* Base style for envelope layers */
+.envelope-front, .envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.letter h2{
-
-font-family:"Great Vibes";
-
-font-size:42px;
-
-color:#ff4d6d;
-
+/* Front Flap (Combines side and bottom triangles cleanly) */
+.envelope-front {
+    background-color: #1c6cb3;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0, 50% 50%);
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
 }
 
-.letter p{
-
-margin-top:10px;
-
-text-align:center;
-
+/* Top Flap Triangle */
+.envelope-flap {
+    background-color: #2582d6;
+    clip-path: polygon(0 0, 100% 0, 50% 55%);
+    border-radius: 10px 10px 0 0;
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    z-index: 4;
 }
 
-.open .top{
-
-transform:rotateX(180deg);
-
+/* 🎀 Horizontal Ribbon Band */
+.envelope-ribbon {
+    position: absolute;
+    top: 55%;                  /* Shifted slightly lower to sit beautifully over the seam */
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(to bottom, #3498db, #1d72b8); /* Shiny satin blue */
+    transform: translateY(-50%);
+    z-index: 10;               /* Higher than flaps to sit completely on top */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.open .letter{
-
-transform:translateY(-160px);
-
+/* 🎀 The Center Bow Knot */
+.ribbon-knot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #165b99;
+    border-radius: 6px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 12;
 }
 
-.click-text{
-
-margin-top:30px;
-
-color:white;
-
-font-size:18px;
-
+/* Left Loop of the Bow */
+.ribbon-knot::before {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: -10px;
+    width: 38px;
+    height: 46px;
+    background: linear-gradient(135deg, #4fa7e6, #1d72b8);
+    border-radius: 50% 50% 15% 50%;
+    transform: rotate(-10deg);
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Right Loop of the Bow */
+.ribbon-knot::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: -10px;
+    width: 38px;
+    height: 46px;
+    background: linear-gradient(225deg, #4fa7e6, #1d72b8);
+    border-radius: 50% 50% 50% 15%;
+    transform: rotate(10deg);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hanging Bow Tails Base Style */
+.ribbon-tail {
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    height: 35px;
+    background: linear-gradient(to bottom, #1d72b8, #165b99);
+    z-index: -1;
+}
+
+/* Left Hanging Tail */
+.left-tail {
+    right: 8px;
+    transform: rotate(30deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
+
+/* Right Hanging Tail */
+.right-tail {
+    left: 8px;
+    transform: rotate(-30deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+}
 .home{
 
 position:relative;

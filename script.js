@@ -341,3 +341,25 @@ if (exitVideoBtn && videoPanel && revealBtn) {
         document.getElementById("motorbike-surprise").scrollIntoView({ behavior: "smooth" });
     });
 }
+
+// List the IDs of your sections in order
+const sections = ['home-section', 'albums-section', 'letters-section', 'board-section', 'babyboy-section'];
+let currentSectionIndex = 0;
+
+// Listen for a tap/click anywhere on the screen
+document.body.addEventListener('click', (event) => {
+    // Prevent scrolling if they click a button, a polaroid, or the music player
+    if (event.target.closest('button, .album, .music-player, a, input')) {
+        return; 
+    }
+
+    // Go to the next section index
+    if (currentSectionIndex < sections.length - 1) {
+        currentSectionIndex++;
+        const nextSection = document.getElementById(sections[currentSectionIndex]);
+        
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});

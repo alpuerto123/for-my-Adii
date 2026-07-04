@@ -1,63 +1,51 @@
 html{
-
-scroll-behavior:smooth;
-
+    scroll-behavior:smooth;
 }
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
+    font-family:"Poppins",sans-serif;
+    background-color: #1d0ab0;
+    overflow-x: auto; /* Changed to auto so phones can render the wider desktop resolution smoothly */
+    color:rgb(255, 255, 255);
+    position:relative;
+}
 
-font-family:"Poppins",sans-serif;
-
-background-color: #1d0ab0;
-overflow-x:hidden;
-
-color:rgb(255, 255, 255);
-
-position:relative;
-
+/* ==========================================================================
+   DESKTOP FORCE WRAPPER
+   This wraps your entire page design and locks it into a fixed laptop resolution 
+   so mobile browsers zoom out instead of smashing the elements.
+   ========================================================================== */
+.home, .landing, .timeline, .love-letter, .memories, .motorbike-surprise {
+    width: 1280px !important; /* Forces layout to act exactly like a laptop screen */
+    margin: 0 auto;
 }
 
 .landing{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-background-color: #020a0b;
-
+    position:fixed;
+    top:0;
+    left:50%;
+    transform: translateX(-50%); /* Keeps it centered at 1280px */
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-color: #1d0ab0;
 }
+
 .title{
-
-font-family:"Great Vibes",cursive;
-
-font-size:60px;
-
-color:white;
-
-margin-bottom:50px;
-
-text-shadow:0 5px 10px rgba(0,0,0,.2);
-
+    font-family:"Great Vibes",cursive;
+    font-size:60px;
+    color:white;
+    margin-bottom:50px;
+    text-shadow:0 5px 10px rgba(0,0,0,.2);
 }
 
 /* ✉️ Main Envelope Container */
@@ -177,387 +165,258 @@ text-shadow:0 5px 10px rgba(0,0,0,.2);
     transform: rotate(-30deg);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
 }
+
 .home{
-
-position:relative;
-
-width:100%;
-
-min-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-color:white;
-
-transition:1s;
-
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    transition:1s;
 }
+
 .hidden{
-
-display:none;
-
+    display:none;
 }
 
 button{
-
-margin-top:30px;
-
-padding:15px 35px;
-
-border:none;
-
-border-radius:50px;
-
-font-size:18px;
-
-background:white;
-
-color:#ff4d6d;
-
-cursor:pointer;
-
-transition:.4s;
-
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+    transition:.4s;
 }
 
 button:hover{
-
-transform:scale(1.1);
-
+    transform:scale(1.1);
 }
+
 .hero{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:120px 20px;
-
-position:relative;
-
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    position:relative;
 }
 
 .hero-title{
-
-font-size:70px;
-
-font-family:"Great Vibes",cursive;
-
-margin-bottom:20px;
-
-color:white;
-
-text-shadow:0 5px 20px rgba(0,0,0,.25);
-
+    font-size:70px;
+    font-family:"Great Vibes",cursive;
+    margin-bottom:20px;
+    color:white;
+    text-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 .hero-text{
-
-font-size:22px;
-
-width:70%;
-
-max-width:700px;
-
-text-align:center;
-
-line-height:1.8;
-
-color:white;
-
-margin-bottom:40px;
-
+    font-size:22px;
+    width:70%;
+    max-width:700px;
+    text-align:center;
+    line-height:1.8;
+    color:white;
+    margin-bottom:40px;
 }
 
 .explore-btn{
-
-padding:18px 45px;
-
-border:none;
-
-border-radius:50px;
-
-font-size:18px;
-
-font-weight:bold;
-
-background:white;
-
-color:#ff4d6d;
-
-cursor:pointer;
-
-transition:.4s;
-
-box-shadow:0 15px 40px rgba(0,0,0,.2);
-
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
 }
 
 .explore-btn:hover{
-
-transform:translateY(-8px) scale(1.05);
-
+    transform:translateY(-8px) scale(1.05);
 }
 
 @keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
 /* ===========================
 NAVBAR
 ===========================*/
-
 .navbar{
-
-position:fixed;
-
-top:20px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:90%;
-
-max-width:1200px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 40px;
-
-background:rgba(255,255,255,.12);
-
-backdrop-filter:blur(20px);
-
-border-radius:50px;
-
-z-index:999;
-
-box-shadow:0 10px 40px rgba(0,0,0,.2);
-
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    border-radius:50px;
+    z-index:999;
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
 }
 
 .logo{
-
-font-family:"Great Vibes",cursive;
-
-font-size:34px;
-
-color:white;
-
+    font-family:"Great Vibes",cursive;
+    font-size:34px;
+    color:white;
 }
 
 .nav-links{
-
-display:flex;
-
-list-style:none;
-
-gap:35px;
-
+    display:flex;
+    list-style:none;
+    gap:35px;
 }
 
 .nav-links a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:18px;
-
-transition:.3s;
-
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
-
-color:#ffe4ee;
-
+    color:#ffe4ee;
 }
 
 .dark-btn{
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.2);
-
-color:white;
-
-margin:0;
-
-}
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:120px 20px;
-
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:rgba(255,255,255,.2);
+    color:white;
+    margin:0;
 }
 
 .hero-content{
-
-max-width:700px;
-
+    max-width:700px;
 }
 
 .hero-subtitle{
-
-font-size:20px;
-
-letter-spacing:3px;
-
-margin-bottom:15px;
-
-text-transform:uppercase;
-
-opacity:.8;
-
+    font-size:20px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+    opacity:.8;
 }
+
 .memories{
-min-height:100vh;
-padding:120px 8%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+    min-height:100vh;
+    padding:120px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 .section-title{
-font-size:60px;
-font-family:"Great Vibes",cursive;
-margin-bottom:20px;
+    font-size:60px;
+    font-family:"Great Vibes",cursive;
+    margin-bottom:20px;
 }
 
 .section-description{
-margin-bottom:60px;
-font-size:20px;
-opacity:.9;
+    margin-bottom:60px;
+    font-size:20px;
+    opacity:.9;
 }
 
 .memory-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+    display:grid;
+    grid-template-columns:repeat(6, 1fr) !important; /* Force all 6 polaroids inline */
+    gap:30px;
+    width: 100%;
 }
 
 .memory-card{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(20px);
-padding:20px;
-border-radius:25px;
-transition:.4s;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    padding:20px;
+    border-radius:25px;
+    transition:.4s;
 }
 
 .memory-card:hover{
-transform:translateY(-10px);
+    transform:translateY(-10px);
 }
 
 .memory-card img{
-width:100%;
-height:320px;
-object-fit:cover;
-border-radius:18px;
-margin-bottom:15px;
-}
-
-html{
-scroll-behavior:smooth;
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:15px;
 }
 
 /* ===========================
 GALLERY
 ===========================*/
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-margin-top:60px;
-width: 100%;
+    display:flex !important; /* Keep items horizontal */
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+    width: 100%;
 }
 
 .gallery-item{
-position:relative;
-overflow:hidden;
-border-radius:25px;
-cursor:pointer;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
-transition:.4s;
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    cursor:pointer;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    transition:.4s;
 }
 
 .gallery-item:hover{
-transform:translateY(-10px);
+    transform:translateY(-10px);
 }
 
 .gallery-item img{
-width:100%;
-height:380px;
-object-fit:cover;
-display:block;
-transition:.6s;
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
 }
 
 .gallery-item:hover img{
-transform:scale(1.1);
+    transform:scale(1.1);
 }
 
 .overlay{
-position:absolute;
-left:0;
-bottom:0;
-width:100%;
-padding:25px;
-background:linear-gradient(transparent,rgba(0,0,0,.8));
-color:white;
-transform:translateY(100%);
-transition:.5s;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:25px;
+    background:linear-gradient(transparent,rgba(0,0,0,.8));
+    color:white;
+    transform:translateY(100%);
+    transition:.5s;
 }
 
 .gallery-item:hover .overlay{
-transform:translateY(0);
+    transform:translateY(0);
 }
 
-/* ==========================================================================
-   INTERACTIVE ALBUM UTILITIES & CONTROLS
-   ========================================================================== */
 .hidden-album-container {
     display: none;
     width: 100%;
@@ -565,7 +424,6 @@ transform:translateY(0);
     align-items: center;
 }
 
-/* Toggles the sub-gallery view dynamically */
 .show-album-container {
     display: flex !important;
 }
@@ -589,58 +447,36 @@ transform:translateY(0);
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
+
 /* ===========================
 LIGHTBOX
 ===========================*/
-
 .lightbox{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.95);
-
-display:none;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:99999;
-
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
 }
 
 .lightbox img{
-
-max-width:90%;
-
-max-height:90%;
-
-border-radius:20px;
-
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
 }
 
 .close-lightbox{
-
-position:absolute;
-
-top:30px;
-
-right:40px;
-
-font-size:50px;
-
-color:white;
-
-cursor:pointer;
-
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:50px;
+    color:white;
+    cursor:pointer;
 }
 
 /* ==========================================================================
@@ -656,8 +492,8 @@ cursor:pointer;
 }
 
 .scrapbook-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forces side-by-side paper sheets */
     gap: 40px;
     justify-content: center;
     align-items: center;
@@ -665,7 +501,6 @@ cursor:pointer;
     width: 100%;
 }
 
-/* Base Scrapbook Page Style (Looks like real lined/blank paper) */
 .scrapbook-page {
     background: #fdfdfd;
     color: #333;
@@ -681,10 +516,9 @@ cursor:pointer;
     transition: transform 0.4s ease;
 }
 
-/* Tilted page effects matching your image */
 .page-left {
     transform: rotate(-3deg);
-    background-image: linear-gradient(#e8e8e8 1px, transparent 1px); /* Subtle notebook line effect */
+    background-image: linear-gradient(#e8e8e8 1px, transparent 1px);
     background-size: 100% 28px;
     padding-top: 60px;
 }
@@ -692,10 +526,8 @@ cursor:pointer;
 .page-right {
     transform: rotate(2deg);
     justify-content: flex-start;
-
 }
 
-/* Washi Tape / Sticker Effect */
 .tape-sticker {
     position: absolute;
     top: 15px;
@@ -709,7 +541,6 @@ cursor:pointer;
     z-index: 5;
 }
 
-/* Polaroid Inside the Notebook */
 .featured-polaroid {
     background: white;
     padding: 10px 10px 20px 10px;
@@ -733,9 +564,8 @@ cursor:pointer;
     text-align: center;
 }
 
-/* Doodle Section */
 .doodle-container {
-    margin-top: auto; /* Pushes doodle to the bottom */
+    margin-top: auto;
     text-align: center;
 }
 
@@ -746,352 +576,185 @@ cursor:pointer;
 }
 
 .stick-figures {
-    font-size: 45px; /* Emoji fallback for the hand-drawn couple */
+    font-size: 45px;
     filter: grayscale(0.2);
 }
 
-/* Typing text stylized as handwriting */
 .typing-text {
     font-family: "Poppins", sans-serif; 
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000000; /* CHANGED TO PURE BLACK */
-    text-align: left;
+    font-size: 18px;
+    line-height: 2;
+    color: #000000;
     white-space: pre-line;
+    min-height: 250px;
+    text-align: center;
     width: 100%;
 }
+
 .letter-card h2{
-
-font-family:"Great Vibes",cursive;
-
-font-size:60px;
-
-margin-bottom:35px;
-
-color:rgb(9, 0, 0);
-
+    font-family:"Great Vibes",cursive;
+    font-size:60px;
+    margin-bottom:35px;
+    color:rgb(9, 0, 0);
 }
 
-.typing-text{
-
-font-size:18px;
-
-line-height:2;
-
-color:rgb(8, 0, 0);
-
-white-space:pre-line;
-
-min-height:250px;
-text-align: center;
-
-}
 /* ===========================
 MUSIC PLAYER
 =========================== */
-
 .music-player{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-display:flex;
-
-align-items:center;
-
-gap:15px;
-
-padding:15px 25px;
-
-border-radius:60px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(20px);
-
-box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-z-index:9999;
-
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 25px;
+    border-radius:60px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    z-index:9999;
 }
 
 #musicBtn{
-
-width:60px;
-
-height:60px;
-
-border-radius:50%;
-
-border:none;
-
-background:white;
-
-color:#ff4d6d;
-
-font-size:24px;
-
-cursor:pointer;
-
-transition:.4s;
-
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:none;
+    background:white;
+    color:#ff4d6d;
+    font-size:24px;
+    cursor:pointer;
+    transition:.4s;
 }
 
 #musicBtn:hover{
-
-transform:scale(1.1) rotate(15deg);
-
+    transform:scale(1.1) rotate(15deg);
 }
 
 .song-info{
-
-display:flex;
-
-flex-direction:column;
-
-color:white;
-
+    display:flex;
+    flex-direction:column;
+    color:white;
 }
 
 .song-title{
-
-font-weight:600;
-
-font-size:18px;
-
+    font-weight:600;
+    font-size:18px;
 }
+
 /* ===========================
 PREMIUM ENVELOPE
 ===========================*/
-
 .envelope-wrapper{
-
-position:relative;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-animation:floatEnvelope 4s ease-in-out infinite;
-
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation:floatEnvelope 4s ease-in-out infinite;
 }
 
 .shadow{
-
-position:absolute;
-
-bottom:-20px;
-
-width:260px;
-
-height:30px;
-
-background:rgba(0,0,0,.25);
-
-filter:blur(20px);
-
-border-radius:50%;
-
-animation:shadowFloat 4s ease-in-out infinite;
-
-}
-
-.envelope{
-
-position:relative;
-
-width:340px;
-
-height:220px;
-
-overflow:hidden;
-
-border-radius:15px;
-
-perspective:1200px;
-
-cursor:pointer;
-
+    position:absolute;
+    bottom:-20px;
+    width:260px;
+    height:30px;
+    background:rgba(0,0,0,.25);
+    filter:blur(20px);
+    border-radius:50%;
+    animation:shadowFloat 4s ease-in-out infinite;
 }
 
 .envelope-back{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-background:#1da5d2;
-
-border-radius:15px;
-
-z-index:1;
-
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#1da5d2;
+    border-radius:15px;
+    z-index:1;
 }
 
 .envelope-front{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-
-height:100%;
-
-background:#1da5d2;
-
-clip-path:polygon(0 100%,50% 45%,100% 100%);
-
-z-index:4;
-
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background:#1da5d2;
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+    z-index:4;
 }
 
 .envelope-flap{
-
-position:absolute;
-
-top:0;
-
-width:100%;
-
-height:100%;
-
-background:#1da5d2;
-
-clip-path:polygon(0 0,50% 48%,100% 0);
-
-transform-origin:top;
-
-transition:1s ease;
-
-z-index:5;
-
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background:#1da5d2;
+    clip-path:polygon(0 0,50% 48%,100% 0);
+    transform-origin:top;
+    transition:1s ease;
+    z-index:5;
 }
 
 .letter{
-
-position:absolute;
-
-left:7%;
-
-bottom:-5px;
-
-width:86%;
-
-height:78%;
-
-background:rgb(248, 250, 248);
-
-border-radius:12px;
-
-padding:20px;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-transition:1s ease;
-
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-
-z-index:2;
-
+    position:absolute;
+    left:7%;
+    bottom:-5px;
+    width:86%;
+    height:78%;
+    background:rgb(248, 250, 248);
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:1s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    z-index:2;
 }
 
 .letter h2{
-
-font-family:"Great Vibes",cursive;
-
-font-size:42px;
-
-color:#ff4d6d;
-
-margin-bottom:15px;
-
+    font-family:"Great Vibes",cursive;
+    font-size:42px;
+    color:#ff4d6d;
+    margin-bottom:15px;
 }
 
 .letter p{
-
-font-size:16px;
-
-line-height:1.6;
-
-color:#555;
-
+    font-size:16px;
+    line-height:1.6;
+    color:#555;
 }
 
 .open .envelope-flap{
-
-transform:rotateX(180deg);
-
+    transform:rotateX(180deg);
 }
 
 .open .letter{
-
-transform:translateY(-120px);
-
+    transform:translateY(-120px);
 }
 
 @keyframes floatEnvelope{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-10px);
-
-}
-
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
 }
 
 @keyframes shadowFloat{
-
-0%,100%{
-
-transform:scale(1);
-
-opacity:.25;
-
+    0%,100%{ transform:scale(1); opacity:.25; }
+    50%{ transform:scale(.8); opacity:.15; }
 }
 
-50%{
-
-transform:scale(.8);
-
-opacity:.15;
-
-}
-
-}
 /* ===========================
-🌸 STEP 11 VISUAL EFFECTS
+🌸 VISUAL EFFECTS
 =========================== */
-
-/* 🌅 ensure background layering */
 .background {
   position: fixed;
   inset: 0;
   z-index: -5;
 }
 
-/* 🌸 PETALS */
 .petal {
   position: fixed;
   top: -10vh;
@@ -1109,7 +772,6 @@ opacity:.15;
   }
 }
 
-/* 💖 FLOATING HEARTS (soft version) */
 .heart {
   position: fixed;
   font-size: 18px;
@@ -1120,17 +782,10 @@ opacity:.15;
 }
 
 @keyframes floatUp {
-  0% {
-    transform: translateY(100vh) scale(0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) scale(1.4);
-    opacity: 0;
-  }
+  0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
 }
 
-/* ✨ SPARKLES */
 .sparkle {
   position: fixed;
   font-size: 10px;
@@ -1146,7 +801,6 @@ opacity:.15;
   100% { transform: scale(1.8); opacity: 0; }
 }
 
-/* 🖱️ CURSOR GLOW */
 .cursor-glow {
   position: fixed;
   width: 18px;
@@ -1158,6 +812,7 @@ opacity:.15;
   transform: translate(-50%, -50%);
   z-index: 999;
 }
+
 /* 🎬 INTRO SCREEN */
 .intro-screen {
   position: fixed;
@@ -1184,18 +839,10 @@ opacity:.15;
 }
 
 @keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-/* 📖 TIMELINE SECTION */
-.timeline {
-  padding: 100px 20px;
-  text-align: center;
-  color: white;
+  to { opacity: 0; visibility: hidden; }
 }
 
+/* 📖 TIMELINE SECTION */
 .story {
   margin: 80px auto;
   max-width: 500px;
@@ -1214,10 +861,7 @@ opacity:.15;
 .story:nth-child(4) { animation-delay: 0.8s; }
 
 @keyframes fadeUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .ending {
@@ -1242,18 +886,10 @@ opacity:.15;
   display: none;
   margin-top: 20px;
 }
-/* 💖 MEMORY WALL */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding: 50px 20px;
-}
 
 /* 📸 POLAROID STYLE */
 .polaroid {
-  width: 180px;
+  width: 300px;
   background: white;
   padding: 10px 10px 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -1262,27 +898,23 @@ opacity:.15;
   transition: 0.3s ease;
 }
 
-/* image inside */
 .polaroid img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-/* caption */
 .polaroid p {
   margin-top: 10px;
   font-size: 14px;
   color: #333;
 }
 
-/* hover effect */
 .polaroid:hover {
   transform: scale(1.05) rotate(0deg);
   z-index: 10;
 }
 
-/* random tilt effect */
 .polaroid:nth-child(1) { --r: -5deg; }
 .polaroid:nth-child(2) { --r: 4deg; }
 .polaroid:nth-child(3) { --r: -3deg; }
@@ -1303,7 +935,6 @@ opacity:.15;
     position: relative;
 }
 
-/* Red & White Checkered Picnic Gingham Pattern Blanket */
 .picnic-blanket {
     position: relative;
     padding: 60px;
@@ -1320,7 +951,6 @@ opacity:.15;
     align-items: center;
 }
 
-/* The Metallic/Silver Tin Container Box */
 .vintage-tin {
     background: linear-gradient(135deg, #e6e6e6, #b3b3b3, #f2f2f2, #999999);
     border: 4px solid #cccccc;
@@ -1333,10 +963,9 @@ opacity:.15;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transform: rotate(4deg); /* Offsets beautifully against the blanket */
+    transform: rotate(4deg);
 }
 
-/* Shared Top and Bottom Sections Inside the Tin */
 .tin-half {
     position: relative;
     width: 100%;
@@ -1347,7 +976,6 @@ opacity:.15;
     padding: 15px;
 }
 
-/* Scrapbook Frames Inside the Tin Box */
 .tin-photo {
     background: white;
     padding: 8px 8px 16px 8px;
@@ -1371,7 +999,6 @@ opacity:.15;
     font-weight: bold;
 }
 
-/* Specific Placements & Tilts to match your layout reference image */
 .main-video-polaroid {
     width: 170px;
     left: 20px;
@@ -1411,13 +1038,12 @@ opacity:.15;
     right: 50px;
     top: 15px;
     transform: rotate(-6deg);
-    border: 4px dashed #ddd; /* Stamp decorative edge fallback */
+    border: 4px dashed #ddd;
 }
 .photo-stamp img {
     height: 110px;
 }
 
-/* Decorative Stickers placement */
 .sticker {
     position: absolute;
     font-size: 26px;
@@ -1430,7 +1056,6 @@ opacity:.15;
 .clip-binder { position: absolute; top: -15px; left: 40%; font-size: 20px; }
 .pushpin { left: 10px; top: -10px; font-size: 22px; }
 
-/* 🎵 SPINNING VINYL RECORD STYLING */
 .vinyl-record {
     position: absolute;
     right: 20px;
@@ -1470,8 +1095,9 @@ opacity:.15;
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
 /* ==========================================================================
-   🏍️ SURPRISE BABY BOY SECTION & INLINE VIDEO LAYOUT
+   🏍️ SURPRISE BABY BOY SECTION
    ========================================================================== */
 .motorbike-surprise {
     min-height: 80vh;
@@ -1482,7 +1108,6 @@ opacity:.15;
     align-items: center;
     background: transparent;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .babyboy-btn {
@@ -1511,7 +1136,7 @@ opacity:.15;
 
 .surprise-showcase-container {
     width: 100%;
-    max-width: 340px; /* Perfect width for a portrait phone frame look */
+    max-width: 340px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1522,21 +1147,20 @@ opacity:.15;
 .motorbike-card {
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16; /* 🌟 Forces the entire frame into a true original portrait ratio */
+    aspect-ratio: 9 / 16;
     border-radius: 25px;
     overflow: hidden;
     background: #000;
     box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
-/* Container for your custom CSS clapperboard overlay */
 .video-logo-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff; /* Crisp white backdrop canvas so the black icon shows up perfectly */
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1557,7 +1181,6 @@ opacity:.15;
     letter-spacing: 0.5px;
 }
 
-/* 🎬 PURE CSS CLAPPERBOARD LOGO DRAWING */
 .css-clapperboard {
     width: 130px;
     display: flex;
@@ -1565,7 +1188,6 @@ opacity:.15;
     align-items: center;
 }
 
-/* The opening top bar with classic clapper stripes */
 .clapper-top {
     width: 130px;
     height: 25px;
@@ -1580,10 +1202,8 @@ opacity:.15;
     border: 2px solid #111;
     transform-origin: bottom left;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-sizing: border-box;
 }
 
-/* The main base box body */
 .clapper-bottom {
     width: 130px;
     height: 85px;
@@ -1594,10 +1214,8 @@ opacity:.15;
     justify-content: center;
     align-items: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    box-sizing: border-box;
 }
 
-/* Play symbol inside the slate box */
 .play-triangle-inner {
     color: white !important;
     font-size: 26px !important;
@@ -1605,7 +1223,6 @@ opacity:.15;
     transition: transform 0.3s ease;
 }
 
-/* Actions: Hover triggers */
 .video-logo-overlay:hover .clapper-top {
     transform: rotate(-12deg) translateY(-2px);
 }
@@ -1633,7 +1250,6 @@ opacity:.15;
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* ❌ Force hide any caption text under the polaroid images */
 .polaroid-card div, 
 .polaroid-card p, 
 .polaroid-card span, 
@@ -1647,40 +1263,24 @@ opacity:.15;
     padding: 0 !important;
 }
 
-/* Optional adjustment: Fixes the card padding so it fits tightly around the photo */
 .polaroid-card {
-    padding-bottom: 15px !important; /* Adjust this if the bottom white gap looks too big */
+    padding-bottom: 15px !important;
 }
 
-/* 📱 Responsive Mobile Fixes */
-@media (max-width: 400px) {
-    /* Scale down the wrapper so it doesn't overflow the screen */
-    .envelope-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
+/* ==========================================================================
+   🚨 DELETED MOBILE MEDIA QUERY CODES (REPLACED TO FORCE LAPTOP VIEWPORT ONLY)
+   ========================================================================== */
 
-    /* Shrink the envelope to safely fit small screens */
-    .envelope {
-        width: 280px !important;
-        height: 175px !important;
-    }
-
-    /* Adjust the ribbon position for the smaller height */
-    .envelope-ribbon {
-        top: 55% !important;
-        height: 28px !important;
-    }
-
-    /* Scale the bow loops slightly down so they stay proportional */
-    .ribbon-knot::before,
-    .ribbon-knot::after {
-        width: 32px !important;
-        height: 40px !important;
-    }
+   .inner-photos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
 }
 
+/* Ensure the images inside don't distort */
+.inner-photos-grid img {
+    width: 120px; /* Adjust based on your design */
+    height: auto;  /* This prevents the tall, thin stretching! */
+    object-fit: cover;
+}

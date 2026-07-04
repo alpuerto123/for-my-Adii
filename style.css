@@ -1632,3 +1632,51 @@ opacity:.15;
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
+@media (max-width: 768px) {
+    /* 📸 Force the Polaroids to stay side-by-side in a horizontal row */
+    .memories-grid, 
+    .polaroid-container-class { /* Replace with your actual row class name */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important; /* Enables smooth finger-swiping left & right */
+        overflow-y: hidden;
+        width: 100% !important;
+        padding: 20px !important;
+        gap: 15px !important;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch; /* Extra smooth scrolling for iPhones */
+    }
+
+    /* Shrink the polaroids slightly so they fit comfortably on mobile height */
+    .polaroid-card, 
+    .memories-grid div { 
+        flex: 0 0 160px !important; /* Keeps them a fixed width so they don't squish */
+        max-width: 160px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 📖 Forces the letter parts to sit side-by-side instead of stacking */
+    .letter-wrapper-class { /* Replace with your main wrapper class around both notes */
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* Scale both cards down proportionally to fit the screen size together */
+    .letter-card, 
+    .note-container,
+    .notebook-container > div {
+        width: 48% !important; /* Takes exactly half the screen width each */
+        max-width: 180px !important;
+        margin: 0 !important;
+        font-size: 11px !important; /* Shrinks the text font slightly so it doesn't spill over */
+        padding: 10px !important;
+    }
+}

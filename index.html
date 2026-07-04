@@ -10,19 +10,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Fixes for the squished bottom photos aspect ratio when desktop layout scales */
-        #inner-photos-grid .polaroid, #inner-photos-grid img {
-            width: 150px !important;
-            height: auto !important;
-            object-fit: cover !important;
-        }
-        /* Quick utility hidden state for clean album transitions */
-        .display-none-hidden {
-            display: none !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -76,6 +63,7 @@
     <!-- ===========================
     HOME
     =========================== -->
+    <!-- Added style inline to ensure layout locks at laptop-width -->
     <section class="home hidden" id="home" style="min-width: 1200px; width: 100%;">
 
         <!-- Navigation -->
@@ -89,8 +77,8 @@
             <button class="dark-btn" id="darkBtn">🌙</button>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero" id="hero" style="min-height: 100vh;">
+        <!-- Hero -->
+        <section class="hero" id="hero">
             <div class="hero-content">
                 <p class="hero-subtitle"></p>
                 <h1 class="hero-title">Happy Monthsary Adii❤️</h1>
@@ -99,59 +87,66 @@
             </div>
         </section>
 
-        <!-- Memories Section -->
-        <section class="memories" id="memories" style="min-height: 100vh;">
+        <!-- Memories -->
+        <section class="memories" id="memories">
 
-            <div class="memories-header">
-                <h2 class="section-title">Our Beautiful Memories ❤️</h2>
-                <p class="section-description">Every picture reminds me why I fell in love with you. Click an album to look inside!</p>
-            </div>
+    <div class="memories-header">
+        <h2 class="section-title">
+            Our Beautiful Memories ❤️
+        </h2>
+        <p class="section-description">
+            Every picture reminds me why I fell in love with you. Click an album to look inside!
+        </p>
+    </div>
 
-            <!-- Main view container with your 6 album covers -->
-            <div class="gallery" id="albums-cover-view">
-                <div class="polaroid album-cover" data-album="first-meet">
-                    <img src="first meet.jpg">
-                    <p>First Meet ❤️</p>
-                </div>
-                <div class="polaroid album-cover" data-album="first-date">
-                    <img src="adi5.jpg">
-                    <p>First Date 💖</p>
-                </div>
-                <div class="polaroid album-cover" data-album="adventure">
-                    <img src="adi14.jpg">
-                    <p>Adventure 🌸</p>
-                </div>
-                <div class="polaroid album-cover" data-album="your-smile">
-                    <img src="adi8.jpg">
-                    <p>Your Smile 😊</p>
-                </div>
-                <div class="polaroid album-cover" data-album="forever">
-                    <img src="adi3.jpg">
-                    <p>Forever 💍</p>
-                </div>
-                <div class="polaroid album-cover" data-album="always">
-                    <img src="adi.jpg">
-                    <p>Always ❤️</p>
-                </div>
-            </div>
+    <div class="gallery" id="albums-cover-view">
 
-            <!-- Inner album container (hidden by default) -->
-            <div id="inner-album-view" class="hidden-album-container display-none-hidden">
-                <div style="text-align: center; margin-bottom: 25px;">
-                    <button id="backToAlbumsBtn" class="explore-btn" style="padding: 10px 20px; font-size: 16px;">⬅️ Back to Albums</button>
-                </div>
-                <h3 id="current-album-title" class="album-display-title" style="text-align: center; color: white; font-family: inherit; margin-bottom: 20px; font-size: 2rem;">Album Name</h3>
-                
-                <div class="gallery" id="inner-photos-grid"></div>
-            </div>
+        <div class="polaroid album-cover" data-album="first-meet">
+            <img src="first meet.jpg">
+            <p>First Meet ❤️</p>
+        </div>
 
-        </section>
+        <div class="polaroid album-cover" data-album="first-date">
+            <img src="adi5.jpg">
+            <p>First Date 💖</p>
+        </div>
 
-        <!-- Love Letter Section -->
-        <section class="love-letter" id="letter" style="min-height: 100vh;">
+        <div class="polaroid album-cover" data-album="adventure">
+            <img src="adi14.jpg">
+            <p>Adventure 🌸</p>
+        </div>
+
+        <div class="polaroid album-cover" data-album="your-smile">
+            <img src="adi8.jpg">
+            <p>Your Smile 😊</p>
+        </div>
+
+        <div class="polaroid album-cover" data-album="forever">
+            <img src="adi3.jpg">
+            <p>Forever 💍</p>
+        </div>
+
+        <div class="polaroid album-cover" data-album="always">
+            <img src="adi.jpg">
+            <p>Always ❤️</p>
+        </div>
+
+    </div>
+
+    <div id="inner-album-view" class="hidden-album-container">
+        <button id="backToAlbumsBtn">⬅️ Back to Albums</button>
+        <h3 id="current-album-title" class="album-display-title" style="text-align: center; color: white; font-family: inherit; margin-bottom: 20px;">Album Name</h3>
+        
+        <div class="gallery" id="inner-photos-grid"></div>
+    </div>
+
+</section>        <!-- ===========================
+        LOVE LETTER
+        =========================== -->
+        <section class="love-letter" id="letter">
             <div class="scrapbook-container">
                 <div class="scrapbook-page page-left">
-                    <div class="tape-sticker">❤️❤️❤️❤️•</div>
+                    <div class="tape-sticker">❤️❤️❤️❤️❤️</div>
                     <div class="featured-polaroid">
                         <img src="adi1.jpg" alt="Our Favorite Memory">
                         <p>Me & You ✨</p>
@@ -172,7 +167,7 @@
         </section>
 
         <!-- Timeline Section -->
-        <section class="timeline" id="Timeline" style="min-height: 100vh;">
+        <section class="timeline" id="Timeline">
             <div class="picnic-blanket">
                 <div class="vintage-tin">
                     <div class="tin-half tin-top">
@@ -214,8 +209,10 @@
             </div>
         </section>
 
-        <!-- Motorbike Surprise Section -->
-        <section class="motorbike-surprise" id="motorbike-surprise" style="min-height: 100vh;">
+        <!-- ===========================
+        🏍️ SURPRISE EXPLORE: MOTORBIKE SECTION
+        =========================== -->
+        <section class="motorbike-surprise" id="motorbike-surprise">
             <div class="memories-header" style="text-align: center;">
                 <h2 class="section-title">Your Baby boy 🏍️</h2>
                 <button id="revealMotorbikeBtn" class="babyboy-btn">Click to your baby boy ✨</button>
@@ -261,9 +258,7 @@
     <audio id="bgMusic" loop>
         <source src="YouandMe.mp3" type="audio/mpeg">
     </audio>
-
     <script src="script.js"></script>
-
     <!-- Extra logic script managing clean display swaps and screen taps -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {

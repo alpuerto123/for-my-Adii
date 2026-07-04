@@ -1704,7 +1704,6 @@ opacity:.15;
 
     /* Optional: Show a quick message telling them to rotate their phone */
     body::before {
-        content: "🔄 Please rotate your phone to landscape for the best experience!";
         position: fixed;
         top: 10px;
         left: 50%;

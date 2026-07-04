@@ -10,6 +10,19 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fixes for the squished bottom photos aspect ratio when desktop layout scales */
+        #inner-photos-grid .polaroid, #inner-photos-grid img {
+            width: 150px !important;
+            height: auto !important;
+            object-fit: cover !important;
+        }
+        /* Quick utility hidden state for clean album transitions */
+        .display-none-hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,7 +76,6 @@
     <!-- ===========================
     HOME
     =========================== -->
-    <!-- Added style inline to ensure layout locks at laptop-width -->
     <section class="home hidden" id="home" style="min-width: 1200px; width: 100%;">
 
         <!-- Navigation -->
@@ -77,8 +89,8 @@
             <button class="dark-btn" id="darkBtn">🌙</button>
         </nav>
 
-        <!-- Hero -->
-        <section class="hero" id="hero">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" style="min-height: 100vh;">
             <div class="hero-content">
                 <p class="hero-subtitle"></p>
                 <h1 class="hero-title">Happy Monthsary Adii❤️</h1>
@@ -87,66 +99,59 @@
             </div>
         </section>
 
-        <!-- Memories -->
-        <section class="memories" id="memories">
+        <!-- Memories Section -->
+        <section class="memories" id="memories" style="min-height: 100vh;">
 
-    <div class="memories-header">
-        <h2 class="section-title">
-            Our Beautiful Memories ❤️
-        </h2>
-        <p class="section-description">
-            Every picture reminds me why I fell in love with you. Click an album to look inside!
-        </p>
-    </div>
+            <div class="memories-header">
+                <h2 class="section-title">Our Beautiful Memories ❤️</h2>
+                <p class="section-description">Every picture reminds me why I fell in love with you. Click an album to look inside!</p>
+            </div>
 
-    <div class="gallery" id="albums-cover-view">
+            <!-- Main view container with your 6 album covers -->
+            <div class="gallery" id="albums-cover-view">
+                <div class="polaroid album-cover" data-album="first-meet">
+                    <img src="first meet.jpg">
+                    <p>First Meet ❤️</p>
+                </div>
+                <div class="polaroid album-cover" data-album="first-date">
+                    <img src="adi5.jpg">
+                    <p>First Date 💖</p>
+                </div>
+                <div class="polaroid album-cover" data-album="adventure">
+                    <img src="adi14.jpg">
+                    <p>Adventure 🌸</p>
+                </div>
+                <div class="polaroid album-cover" data-album="your-smile">
+                    <img src="adi8.jpg">
+                    <p>Your Smile 😊</p>
+                </div>
+                <div class="polaroid album-cover" data-album="forever">
+                    <img src="adi3.jpg">
+                    <p>Forever 💍</p>
+                </div>
+                <div class="polaroid album-cover" data-album="always">
+                    <img src="adi.jpg">
+                    <p>Always ❤️</p>
+                </div>
+            </div>
 
-        <div class="polaroid album-cover" data-album="first-meet">
-            <img src="first meet.jpg">
-            <p>First Meet ❤️</p>
-        </div>
+            <!-- Inner album container (hidden by default) -->
+            <div id="inner-album-view" class="hidden-album-container display-none-hidden">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <button id="backToAlbumsBtn" class="explore-btn" style="padding: 10px 20px; font-size: 16px;">⬅️ Back to Albums</button>
+                </div>
+                <h3 id="current-album-title" class="album-display-title" style="text-align: center; color: white; font-family: inherit; margin-bottom: 20px; font-size: 2rem;">Album Name</h3>
+                
+                <div class="gallery" id="inner-photos-grid"></div>
+            </div>
 
-        <div class="polaroid album-cover" data-album="first-date">
-            <img src="adi5.jpg">
-            <p>First Date 💖</p>
-        </div>
+        </section>
 
-        <div class="polaroid album-cover" data-album="adventure">
-            <img src="adi14.jpg">
-            <p>Adventure 🌸</p>
-        </div>
-
-        <div class="polaroid album-cover" data-album="your-smile">
-            <img src="adi8.jpg">
-            <p>Your Smile 😊</p>
-        </div>
-
-        <div class="polaroid album-cover" data-album="forever">
-            <img src="adi3.jpg">
-            <p>Forever 💍</p>
-        </div>
-
-        <div class="polaroid album-cover" data-album="always">
-            <img src="adi.jpg">
-            <p>Always ❤️</p>
-        </div>
-
-    </div>
-
-    <div id="inner-album-view" class="hidden-album-container">
-        <button id="backToAlbumsBtn">⬅️ Back to Albums</button>
-        <h3 id="current-album-title" class="album-display-title" style="text-align: center; color: white; font-family: inherit; margin-bottom: 20px;">Album Name</h3>
-        
-        <div class="gallery" id="inner-photos-grid"></div>
-    </div>
-
-</section>        <!-- ===========================
-        LOVE LETTER
-        =========================== -->
-        <section class="love-letter" id="letter">
+        <!-- Love Letter Section -->
+        <section class="love-letter" id="letter" style="min-height: 100vh;">
             <div class="scrapbook-container">
                 <div class="scrapbook-page page-left">
-                    <div class="tape-sticker">❤️❤️❤️❤️❤️</div>
+                    <div class="tape-sticker">❤️❤️❤️❤️•</div>
                     <div class="featured-polaroid">
                         <img src="adi1.jpg" alt="Our Favorite Memory">
                         <p>Me & You ✨</p>
@@ -167,7 +172,7 @@
         </section>
 
         <!-- Timeline Section -->
-        <section class="timeline" id="Timeline">
+        <section class="timeline" id="Timeline" style="min-height: 100vh;">
             <div class="picnic-blanket">
                 <div class="vintage-tin">
                     <div class="tin-half tin-top">
@@ -209,10 +214,8 @@
             </div>
         </section>
 
-        <!-- ===========================
-        🏍️ SURPRISE EXPLORE: MOTORBIKE SECTION
-        =========================== -->
-        <section class="motorbike-surprise" id="motorbike-surprise">
+        <!-- Motorbike Surprise Section -->
+        <section class="motorbike-surprise" id="motorbike-surprise" style="min-height: 100vh;">
             <div class="memories-header" style="text-align: center;">
                 <h2 class="section-title">Your Baby boy 🏍️</h2>
                 <button id="revealMotorbikeBtn" class="babyboy-btn">Click to your baby boy ✨</button>
@@ -258,6 +261,59 @@
     <audio id="bgMusic" loop>
         <source src="YouandMe.mp3" type="audio/mpeg">
     </audio>
+
     <script src="script.js"></script>
+
+    <!-- Extra logic script managing clean display swaps and screen taps -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const coversView = document.getElementById("albums-cover-view");
+            const innerView = document.getElementById("inner-album-view");
+            const backBtn = document.getElementById("backToAlbumsBtn");
+            const albumCovers = document.querySelectorAll(".album-cover");
+
+            // Handle switching view when any album item is touched or clicked
+            albumCovers.forEach(cover => {
+                cover.addEventListener("click", () => {
+                    coversView.classList.add("display-none-hidden");
+                    innerView.classList.remove("display-none-hidden");
+                });
+            });
+
+            // Revert layout cleanly when clicking 'Back to Albums'
+            if(backBtn) {
+                backBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // Prevents triggers from conflicting with tap-to-scroll features
+                    innerView.classList.add("display-none-hidden");
+                    coversView.classList.remove("display-none-hidden");
+                });
+            }
+
+            // --- TAP-TO-SCROLL TO NEXT SECTION SYSTEM ---
+            const chronologicalSections = ["hero", "memories", "letter", "Timeline", "motorbike-surprise"];
+            
+            document.body.addEventListener("click", (event) => {
+                // Ignore any taps occurring inside buttons, links, video interactions, player items, or card containers
+                if (event.target.closest("button, .album-cover, .music-player, a, input, video, #tinVinyl, #envelope")) {
+                    return; 
+                }
+
+                // Check the scroll offset relative to known viewport targets
+                let targetFound = false;
+                for (let i = 0; i < chronologicalSections.length; i++) {
+                    const sectionEl = document.getElementById(chronologicalSections[i]);
+                    if (sectionEl) {
+                        const bounds = sectionEl.getBoundingClientRect();
+                        // If a section is active but trailing lower, aim navigation onto its direct successor element
+                        if (bounds.top > 10 && !targetFound) {
+                            sectionEl.scrollIntoView({ behavior: "smooth" });
+                            targetFound = true;
+                            break;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

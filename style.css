@@ -9,18 +9,42 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-
-font-family:"Poppins",sans-serif;
-
-background-color: #1d0ab0;
-overflow-x:hidden;
-
-color:rgb(255, 255, 255);
-
-position:relative;
-
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #ffffff;
+    position: relative;
+    /* Ensure content stays above the blurred layer */
+    z-index: 0; 
 }
+
+/* This creates a separate background layer that we can safely blur */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('us1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Adjust the pixels below to control the blur intensity */
+    filter: blur(8px); 
+    
+    /* Darkens the background slightly so text is easier to read */
+    brightness: 0.8; 
+    
+    /* Keeps the layer behind everything else */
+    z-index: -1; 
+    
+    /* Eliminates white edges caused by the blur effect */
+    transform: scale(1.05); 
+}
+
 
 .landing{
 
@@ -652,7 +676,7 @@ cursor:pointer;
     justify-content: center;
     align-items: center;
     padding: 80px 20px;
-    background-color: #1d0ab0;
+    background-color: #1d0ab000;
 }
 
 .scrapbook-container {
@@ -1296,7 +1320,7 @@ opacity:.15;
 .timeline {
     min-height: 100vh;
     padding: 100px 20px;
-    background-color: #1d0ab0;
+    background-color: #1d0ab000;
     display: flex;
     justify-content: center;
     align-items: center;
